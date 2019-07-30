@@ -18,6 +18,15 @@ public class Result<E> implements Serializable{
 		this.code = code;
 		this.msg = msg;
 	}
+	
+	
+
+	public Result() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
 
 	public List<E> getDataList() {
 		return dataList;
@@ -42,5 +51,14 @@ public class Result<E> implements Serializable{
 	public void setMsg(String msg) {
 		this.msg = msg;
 	}
+
+
+
+	@Override
+	public String toString() {
+		return "Result [dataList=" + dataList + ", code=" + code + ", msg=" + msg + "]";
+	}
+	
+	
 	
 }
