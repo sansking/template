@@ -1,4 +1,4 @@
-package com.git.template.general.srcviewer;
+package com.git.template.general.code.viewer;
 
 import java.io.File;
 import java.net.URL;

@@ -13,9 +13,15 @@ import com.git.template.general.common.Result;
 import com.git.template.test.service.TestService;
 
 @Controller
-@RequestMapping("/sys")
+@RequestMapping("/test")
 public class TestController {
 	
+	@ResponseBody
+	@RequestMapping("/getAll.action")
+	public Result<Object> test(){
+		return new Result<Object>(null,200,"网络连接成功!");
+	}
+
 	@Autowired
 	TestService testService;
 	

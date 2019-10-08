@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "backwardTemplate",
+            "request": "launch",
+            "mainClass": "com.git.template.TemplateApplication",
+            "projectName": "backward-template"
+        }
+    ]
+}

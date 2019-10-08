@@ -9,12 +9,11 @@ public class StringUtils {
 	private StringUtils(){};
 	
 	/**
-	 * enhance the origin replaceAll function of String;
-	 * 	originally ,you could use $1...$n to get the matched group but u are hardly to translate it;
-	 * 	now ,with the last parameter of this method(a Function),u can use this method as in JS
+	 * 用于增强String的replace方法,实现类似js中的效果: str.replace(/regex/,function(){});
 	 * @param input
 	 * @param regex
-	 * @param replacer a Function,which could accept a String[](the matched groups) as parameter ,and return a String,as the replaced String
+	 * @param replacer 接收String[]作为参数的函数,该String数组为每一次匹配得到的group数组
+	 * 					该函数的返回值会替代匹配到的那一部分字符串
 	 * @return
 	 */
 	public static String replace(String input,String regex,Function<String[],String> replacer) {
@@ -23,7 +22,6 @@ public class StringUtils {
 		
 		Matcher m = Pattern.compile(regex).matcher(input);
 		int start = 0;
-		
 		while(m.find()) {
 			// 添加未被匹配到的部分
 			sb.append(input.substring(start,m.start()));

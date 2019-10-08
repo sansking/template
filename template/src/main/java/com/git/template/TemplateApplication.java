@@ -23,6 +23,11 @@ public class TemplateApplication implements CommandLineRunner, Ordered {
     private NettyServerListener listener;
 
     public static void main(String[] args) {
+
+        System.out.println("############Main方法正在运行###########");
+        Runtime.getRuntime().addShutdownHook(new Thread(()->{
+            System.out.println("############虚拟机正准备关闭###########");
+        }));
         SpringApplication.run(TemplateApplication.class, args);
     }
 

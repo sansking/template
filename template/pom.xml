@@ -11,12 +11,13 @@
 	<groupId>com.git.template</groupId>
 	<artifactId>backward-template</artifactId>
 	<version>1.0</version>
-	<packaging>war</packaging>
+	<!--	<packaging>war</packaging> -->
 	<name>template</name>
 	<description>a backward project for a general use</description>
 
 	<properties>
 		<java.version>1.8</java.version>
+		<basepath>C:\Users\wangp\Desktop\Workspaces\VSWorkspace\javaProject\template\template</basepath>
 	</properties>
 
 	<dependencies>
@@ -131,6 +132,26 @@
 	</dependencies>
 
 	<build>
+		<sourceDirectory>${basepath}/src/main/java</sourceDirectory> 
+		<scriptSourceDirectory>${basepath}/src/main/scripts</scriptSourceDirectory> 
+		<testSourceDirectory>${basepath}/src/test/java</testSourceDirectory>
+		<outputDirectory>${basepath}/target/classes</outputDirectory> 
+		<testOutputDirectory>${basepath}/target/test-classes</testOutputDirectory>
+		<resources>
+			<resource>  
+				<directory>${basepath}/src/main/resources</directory>
+				<includes>
+					<include>*.*</include>
+				</includes>  
+			</resource>  
+		</resources>  
+		<testResources>  
+		<testResource>  
+			<directory>${basepath}/src/test/resources</directory>  
+		</testResource>  
+		</testResources>  
+		<directory>${basepath}/target</directory>  
+
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

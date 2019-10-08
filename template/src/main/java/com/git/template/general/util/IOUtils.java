@@ -12,9 +12,16 @@ import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 该类用于读取文件,主要方法(包含重载)如下:
+ * 	getFileByLine: 按行读取文件,并返回List<String>作为每一行的数据
+ * 			//默认编码方式为 utf-8,并且默认去掉每一行的首尾空格
+ * 	getFile: 读取整个文件,返回一个该文件对应的字符串
+ */
 public class IOUtils {
 	
-	private static int byteLimitation = 1 << 31;
+	// 默认读取文件的字节数限制为 2^4*2^20字节,即16M
+	private static int byteLimitation = 1 << 25;
 	public static int getByteLimitation() {
 		return byteLimitation;
 	}
@@ -125,5 +132,6 @@ public class IOUtils {
 	public boolean writeTo(String src,String path){
 		return writeTo(src,path,"utf-8");
 	}
+
 	
 }

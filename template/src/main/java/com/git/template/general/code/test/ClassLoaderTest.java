@@ -1,4 +1,4 @@
-package com.git.template.general.srcviewer;
+package com.git.template.general.code.test;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -7,9 +7,10 @@ import java.util.Map;
 
 import com.git.template.general.util.DynamicLoader;
 
-public class TestViewer {
-	
-	
+/**
+ * MemoryClassLoader和StringClassLoader的使用方式
+ */
+public class ClassLoaderTest {
 	public static void main(String[] args) throws IOException, ClassNotFoundException, NoSuchMethodException, SecurityException, IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 		
 		String str = "package com.git.template.test1;"+"\r\n"+
@@ -47,6 +48,11 @@ public class TestViewer {
 	    DynamicLoader.MemoryClassLoader classLoader2 = new DynamicLoader.MemoryClassLoader(obyte);
 	    Class clazz2 = classLoader2.loadClass("com.git.template.test1.ShowMsg");
 	    Method method2 = clazz2.getMethod("main",String[].class);
-	    method2.invoke(null, (Object)args);	    
+		method2.invoke(null, (Object)args);	   
+		
+		
+		Class clazz3 = Class.forName("com.git.template.test1.ShowMsg");
+		Method method3 = clazz3.getMethod("main",String[].class);
+		method3.invoke(null, (Object)args);	
 	}
 }

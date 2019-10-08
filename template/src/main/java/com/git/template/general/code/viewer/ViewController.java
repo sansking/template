@@ -1,4 +1,4 @@
-package com.git.template.general.srcviewer;
+package com.git.template.general.code.viewer;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
