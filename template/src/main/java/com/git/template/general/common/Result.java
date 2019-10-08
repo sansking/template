@@ -7,7 +7,6 @@ public class Result<E> implements Serializable{
 	
 
 	private static final long serialVersionUID = 1L;
-	
 	private List<E> dataList;
 	private int code;
 	private String msg;
@@ -19,11 +18,8 @@ public class Result<E> implements Serializable{
 		this.msg = msg;
 	}
 	
-	
-
 	public Result() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 
@@ -51,8 +47,6 @@ public class Result<E> implements Serializable{
 	public void setMsg(String msg) {
 		this.msg = msg;
 	}
-
-
 
 	@Override
 	public String toString() {

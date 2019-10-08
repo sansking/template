@@ -4,7 +4,7 @@ public class ExcelThread implements Runnable{
 
 	@Override
 	public void run() {
-		
+		ClassLoader classLoader = this.getClass().getClassLoader();
 	}
 
 }

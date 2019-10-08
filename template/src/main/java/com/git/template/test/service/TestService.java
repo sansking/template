@@ -3,7 +3,6 @@ package com.git.template.test.service;
 import java.util.List;
 import java.util.Map;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.git.template.test.mapper.TestMapper;
@@ -12,7 +11,7 @@ import com.git.template.test.mapper.TestMapper;
 public class TestService {
 
 	
-	@Autowired
+	//@Autowired
 	private TestMapper testMapper;
 	
 	public List<Map<String, Object>> getDataList(Map<String,Object> params) {

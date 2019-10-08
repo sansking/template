@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.git.template.general.common.Result;
 import com.git.template.test.service.TestService;
@@ -18,6 +19,7 @@ public class TestController {
 	@Autowired
 	TestService testService;
 	
+	@ResponseBody
 	@RequestMapping("/test.action")
 	public Result<Map<String,Object>> getTest(@RequestParam(required=true)Map<String,Object> params) {
 		

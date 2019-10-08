@@ -1,0 +1,12 @@
+package com.git.template.test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ShowMsg {
+	public static void main(String[] args) {
+		List<String> list = new ArrayList<>();
+		list.add("Show List Message");
+		System.out.println(list);
+	}
+}
